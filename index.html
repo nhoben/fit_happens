@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-
+    <html lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,9 +9,9 @@
 
 
     <!--link to the style sheet -->
-    <link rel="stylesheet" type="text/css" href="./assets/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <!--link to reset css -->
-    <link rel="stylesheet" type="text/css" href="./assets/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/reset.css">
     <!-- link to bootstrap library -->
     <link type="text/css" rel="stylesheet" href="assets/magicscroll-trial/magicscroll-trial/magicscroll/magicscroll.css">
     <script type="text/javascript" src="assets/magicscroll-trial/magicscroll-trial/magicscroll/magicscroll.js"></script>
@@ -35,24 +34,28 @@
         <div class="girl-image">
             <div class="topbanner">
                 <h1> The Place to Curb Your Craving or Work it Off!!!
-                    <img id="logo" src="./logoother/newlogo.png">
+                    <img id="logo" src="assets/images/logoother/newlogo.png">
                 </h1>
             </div>
         </div>
+     
         <ul class="nav nav-pills nav-fill">
-            <li class="nav-item">
-                <a class="nav-link" href="./index.html">User Profile </a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="./scroll.html">Food/Calories</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="#">Workout</a>
-            </li>
-
-        </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">User Profile </a>
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link" href="index2.html">Food/Calories</a>
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link" href="workout.html">Workout</a>
+                </li>
+    
+            </ul>
+    
+    
+    
 
 
 
@@ -71,7 +74,6 @@
                         <th class="data">Height (in)</th>
                         <th class="data">Gender</th>
                         <th class="data">Age</th>
-                        
                     </tr>
                 </thead>
                 <tbody>
@@ -84,31 +86,35 @@
 
     <div class="container-fluid2">
 
-        <h4 id=user-profile> User Profile</h4>
+            <h4 id=user-profile> User Profile</h4>
         <div class="row">
-
+            
             <form class="col-md-3">
                 <p>Firstname:
+                    <br>
                     <input type="text" name="firstname" id="firstNameInput">
                 </p>
                 <p>Lastname:
+                    <br>
                     <input type="text" name="lastname" id="lastNameInput">
                 </p>
                 <p>Email Address:
                     <input type="text" name="email address" id="emailInput">
                 </p>
                 <p>Age:
+                    <br>
                     <input type="number" age="age" id="ageInput">
                 </p>
                 <p>Weight(in lbs):
                     <input type="number" weight="weight" id="weightInput">
                 </p>
                 <p>Height(inches):
-
+                    <br>
                     <input type="number" name="inches" min="0" max="100" step="1" id="heightInput">
 
                 </p>
                 <p>Gender:
+                    <br>
                     <input type="text" gender="gender" id="genderInput">
                 </p>
                 <p>
@@ -124,10 +130,10 @@
 
 
 
-        <script type="text/javascript" src="./getfit.js"></script>
+        <script type="text/javascript" src="./profile.js"></script>
 </body>
 
 
-
+</body>
 
 </html>
