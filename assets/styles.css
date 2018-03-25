@@ -156,21 +156,22 @@ display:inline-block;
    
   }
 
-
+/* comment 
 .fullpage {
-  background-image: url(assets\images\logoother\mosaic.jpg);
+  background-image: url("./assets/images/logoother/mosaic.jpg");
   background-repeat: repeat
 }
+*/
 
 
 .nav-pills { font-family: 'Comfortaa', 'cursive';
  
   font-size: 1.5em;
   font-weight: bolder;
-
-  background-image: url(assets/images/logoother/pixels.jpg);
+/* comment out to remove error
+  background-image: url("./assets/images/logoother/pixels.jpg");
   height: 15%;
- 
+ */
   }
   
 #user-profile {

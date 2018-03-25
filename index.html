@@ -9,12 +9,12 @@
 
 
     <!--link to the style sheet -->
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="./assets/styles.css">
     <!--link to reset css -->
-    <link rel="stylesheet" type="text/css" href="assets/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/reset.css">
     <!-- link to bootstrap library -->
-    <link type="text/css" rel="stylesheet" href="assets/magicscroll-trial/magicscroll-trial/magicscroll/magicscroll.css">
-    <script type="text/javascript" src="assets/magicscroll-trial/magicscroll-trial/magicscroll/magicscroll.js"></script>
+    <link type="text/css" rel="stylesheet" href="./assets/magicscroll-trial/magicscroll-trial/magicscroll/magicscroll.css">
+    <script type="text/javascript" src="./assets/magicscroll-trial/magicscroll-trial/magicscroll/magicscroll.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <!-- link to jquery library -->
@@ -34,7 +34,7 @@
         <div class="girl-image">
             <div class="topbanner">
                 <h1> The Place to Curb Your Craving or Work it Off!!!
-                    <img id="logo" src="assets/images/logoother/newlogo.png">
+                    <img id="logo" src="./assets/images/logoother/newlogo.png">
                 </h1>
             </div>
         </div>
@@ -62,12 +62,13 @@
 
 
         <div class="panel-heading">
-
+            <h4> User List </h4>
         </div>
         <div class="panel-body">
             <table class="table table-bordered" id="userTable">
                 <thead>
                     <tr>
+                        <th class="data">Select User</th>
                         <th class="data">First Name</th>
                         <th class="data">Last Name</th>
                         <th class="data">Current Weight (lbs)</th>
@@ -86,7 +87,7 @@
 
     <div class="container-fluid2">
 
-        <h4 id=user-profile> User Profile</h4>
+        <h4 id=user-profile>Add New User:</h4>
         <div class="row">
 
             <form class="col-md-3">
@@ -118,7 +119,7 @@
                     <input type="text" gender="gender" id="genderInput">
                 </p>
                 <p>
-                    <input type="submit" class="btn-info" id="submit-btn">
+                    <button type="submit" class="btn btn-defaul" id="userButton">Submit</button>
                 </p>
             </form>
             <div id="btn-section" class="col-md-9">
@@ -127,12 +128,32 @@
 
         </div>
 
+        <!-- initialize firebase db -->
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyAiEVXlgKH6F0J0duzmVdODqy7xMajM_zE",
+                authDomain: "fithappens-bb1e1.firebaseapp.com",
+                databaseURL: "https://fithappens-bb1e1.firebaseio.com",
+                projectId: "fithappens-bb1e1",
+                storageBucket: "fithappens-bb1e1.appspot.com",
+                messagingSenderId: "139108385488"
+            };
+            firebase.initializeApp(config);
+        </script>
 
+        <!-- link to jquery library -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
 
+        <!-- Link to Moment.js should go here -->
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
-        <script type="text/javascript" src="./profile.js"></script>
-</body>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 
+        <!--link to javascript file -->
+        <script type="text/javascript" src="./assets/javascript/userProfile.js"></script>
 
 </body>
 
