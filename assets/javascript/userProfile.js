@@ -18,8 +18,8 @@ $(document).ready(function () {
     //console.log user profile to make sure it works
     console.log(firstName);
 
-    //database.ref().push({
-    database.ref().child(firstName+"_"+lastName).set({
+    var user = database.ref().push({
+    //database.ref().child(firstName+"_"+lastName).set({
       firstName: firstName,
       lastName: lastName,
       email: email,
@@ -30,23 +30,21 @@ $(document).ready(function () {
       dateAdded: firebase.database.ServerValue.TIMESTAMP,
     });
     alert("New User has been added!");
+    var userId = user.key;
+    console.log(userId);
 
     //clear the userInputForm
-     // Clear form
-  document.getElementById("userForm").reset();
+  //document.getElementById("userForm").reset();
 
   });
 
   database.ref().on("child_added", function (childSnapshot) {
 
     //var newRowContent = "<tr><td>" + childSnapshot.val().firstName + "</td><td>" + childSnapshot.val().lastName + "</td><td>" + childSnapshot.val().weight + "</td><td>" + childSnapshot.val().height + "</td><td>" + childSnapshot.val().dateAdded + "</td></tr>"
-    var newRowContent = "<tr><td>" + '<input type="radio" value="" name="selectUser"/>' + "</td><td>" + childSnapshot.val().firstName + "</td><td>" + childSnapshot.val().lastName + "</td><td>" + childSnapshot.val().weight + "</td><td>" + childSnapshot.val().height + "</td><td>" + childSnapshot.val().gender + "</td><td>"+ childSnapshot.val().age + "</td><td>" 
+    var newRowContent = "<tr><td>" + '<input type="radio" value="" name="selectUser"/>' + "</td><td>" + childSnapshot.val().firstName + "</td><td>" + childSnapshot.val().lastName + "</td><td>" + childSnapshot.val().weight + "</td><td>" + childSnapshot.val().height + "</td><td>" + childSnapshot.val().gender + "</td><td>"+ childSnapshot.val().age  
     
-    $(":radio").attr.val() = childSnapshot.val().firstName+"_"+childSnapshot.val().lastName;
-    //append record into the user table
-    $("#userTable tbody").append(newRowContent);   
-
-    //$( "input[type=radio][name=baz]:checked" ).val();
+    //load data into the userTbl
+    $("#userTable tbody").append(newRowContent);
 
   }, function (errorObject) {
     console.log("Errors handled: " + errorObject.code);
