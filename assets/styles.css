@@ -1,0 +1,182 @@
+
+.topbanner{
+  
+  height: 5em;
+  text-align: center;
+  text-justify: auto;
+  padding-top: 2em;
+  color:rgb(152, 219, 152);
+  font-size: 3em;
+  font-stretch: normal;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 1600
+}
+
+
+.girl-image{
+  background-image: url(../assets/images/logoother/balllady.jpg);
+  background-size: cover;
+}
+
+.MagicScroll{
+
+  height: 10em;
+  width: 60em;
+  margin-top: 1em;
+  margin-left: 10em;
+
+  border: .5em solid rgb(25, 13, 184);
+  border-radius: 1em;
+
+}
+
+.about { border-radius: 10%;
+  width: 70%;
+  height: 10em;
+  margin-top: 2em;
+  margin-right: auto;
+  margin-left: auto;
+  background-color:#666161;
+  border: .2em dotted rgb(8, 17, 8);
+  font-size: 2em;
+  font-family: 'Confortaa', 'cursive'; 
+  text-align: center;
+  color:rgb(14, 12, 12);
+}
+  
+#caloriesshow{
+  border-radius: 10%;
+  width: 25%;
+  height: 5em;
+  margin-top: 2em;
+  background-color:#666161;
+  border: .2em dotted rgb(8, 17, 8);
+  font-size: 2em;
+  font-family: 'Confortaa', 'cursive'; 
+  text-align: center;
+  color:rgb(14, 12, 12);
+  display: inline-block;
+  margin-left:20%;
+  
+
+ 
+
+
+}
+
+#workouttimeshow{
+
+  border-radius: 10%;
+  width: 25%;
+  height: 5em;
+  margin-top: 2em;
+  background-color:#666161;
+  border: .2em dotted rgb(8, 17, 8);
+  font-size: 2em;
+  font-family: 'Confortaa', 'cursive'; 
+  text-align: center;
+  color:rgb(14, 12, 12);
+  display: inline-block;
+  margin-right: 20%;
+  
+ 
+
+}
+
+
+
+h5{
+   font-size: 2em;
+   color:rgb(151, 240, 151)
+}
+
+h7{
+  font-size: 2em;
+  color:rgb(151, 240, 151)
+}
+
+h8{
+  font-size: 2em;
+  color:rgb(151, 240, 151)
+}
+.container-fluid2{
+  background-color: rgb(186, 222, 252);
+  padding: 1em 1em 1em 1em;
+  margin-right: auto;
+  margin-left:auto;
+  margin-top:3em;
+  width: 64.5em;
+  border: .5em solid rgb(25, 13, 184);
+  border-radius: 1em;
+
+}
+
+#logo{
+  width:6em;
+  height:4em;
+  float: left;
+  margin-top:-1.6em
+}
+
+
+#img-animate {
+  position: center;
+  width: 300px;
+  height: 300px;
+  background-position: 50% 50%;
+  background-size:     cover;
+  border: .1em solid rgb(8, 82, 14);
+  border-radius: .2em;
+}
+#Img{
+  border: .3em solid rgb(8, 82, 14);
+  border-radius: .2em;
+}
+.data {color: white; 
+
+}
+
+#userTable{color: white
+
+}
+
+#btn {
+width:300px;
+margin-top:.5em;
+}
+
+.both{  
+display:inline-block;
+}
+
+
+.gifnbuttons{
+      margin-right: 3%;
+      margin-left: 3%;
+   
+  }
+
+
+.fullpage {
+  background-image: url(assets\images\logoother\mosaic.jpg);
+  background-repeat: repeat
+}
+
+
+.nav-pills { font-family: 'Comfortaa', 'cursive';
+ 
+  font-size: 1.5em;
+  font-weight: bolder;
+
+  background-image: url(assets/images/logoother/pixels.jpg);
+  height: 15%;
+ 
+  }
+  
+#user-profile {
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+}

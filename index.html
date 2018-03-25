@@ -1,79 +1,139 @@
 <!DOCTYPE html>
-<!--   PSUEDOCODE
-
-USER PROFILE
-- Create a user profile 
-- Ask for music genre preference
-- (Use a firebase db to store this information)
-- (Db will have user profiles, food and drink images)
-- User will need to enter name,age, weight, height and a photo
-- User will submit that information
-- After they submit, the user profile should display all of the information that they entered
-
-FOOD/DRINK SELECTION
-- The user will then be directed to next page
-- User will select food or drink 
-- (Must have images already populated)
-- Based on selection, either food or drink items populate
-- (Image scroll functionality)
-- User selects individual item
-- Calorie info populates on page 
-- (Calorie calculator)
-- Amount/level of exercise also populates on page
-- (Exercise calculator)
-- User creates playlist
-- (On click event triggers Spotify API)
-- Music populates 
-- my awesome changes
-
-
--->
-<html lang="en">
 
 <head>
+    <html lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>User Profile</title>
 
+
+    <!--link to the style sheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!--link to reset css -->
+    <link rel="stylesheet" type="text/css" href="assets/reset.css">
+    <!-- link to bootstrap library -->
+    <link type="text/css" rel="stylesheet" href="assets/magicscroll-trial/magicscroll-trial/magicscroll/magicscroll.css">
+    <script type="text/javascript" src="assets/magicscroll-trial/magicscroll-trial/magicscroll/magicscroll.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- link to jquery library -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!--link to firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <!-- Link to Moment.js should go here -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body background="assets\images\logoother\mosaic.jpg">
+    <div class="fullpage">
 
-    <link src="./images.style.css">
+        <div class="girl-image">
+            <div class="topbanner">
+                <h1> The Place to Curb Your Craving or Work it Off!!!
+                    <img id="logo" src="assets/images/logoother/newlogo.png">
+                </h1>
+            </div>
+        </div>
+
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">User Profile </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="index2.html">Food/Calories</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="workout.html">Workout</a>
+            </li>
+
+        </ul>
 
 
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyAiEVXlgKH6F0J0duzmVdODqy7xMajM_zE",
-            authDomain: "fithappens-bb1e1.firebaseapp.com",
-            databaseURL: "https://fithappens-bb1e1.firebaseio.com",
-            projectId: "fithappens-bb1e1",
-            storageBucket: "fithappens-bb1e1.appspot.com",
-            messagingSenderId: "139108385488"
-        };
-        firebase.initializeApp(config);
 
-        //create database variable 
-        var database = firebase.database();
 
-    </script>
 
-    <!-- adding selector button for food JUST TESTING TO SEE IF IT WORKS  -->
 
-    <div class="MagicScroll">
 
-           <img class= "image" name="pizza" src="assets/images/food/pizza.png">
-        
-           <img class= "image" name="sushi" src="assets/images/food/sushi.jpg">
 
+        <div class="panel-heading">
+
+        </div>
+        <div class="panel-body">
+            <table class="table table-bordered" id="userTable">
+                <thead>
+                    <tr>
+                        <th class="data">First Name</th>
+                        <th class="data">Last Name</th>
+                        <th class="data">Current Weight (lbs)</th>
+                        <th class="data">Height (in)</th>
+                        <th class="data">Gender</th>
+                        <th class="data">Age</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
     </div>
+    <br>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="getfit.js"></script>
+
+    <div class="container-fluid2">
+
+        <h4 id=user-profile> User Profile</h4>
+        <div class="row">
+
+            <form class="col-md-3">
+                <p>Firstname:
+                    <br>
+                    <input type="text" name="firstname" id="firstNameInput">
+                </p>
+                <p>Lastname:
+                    <br>
+                    <input type="text" name="lastname" id="lastNameInput">
+                </p>
+                <p>Email Address:
+                    <input type="text" name="email address" id="emailInput">
+                </p>
+                <p>Age:
+                    <br>
+                    <input type="number" age="age" id="ageInput">
+                </p>
+                <p>Weight(in lbs):
+                    <input type="number" weight="weight" id="weightInput">
+                </p>
+                <p>Height(inches):
+                    <br>
+                    <input type="number" name="inches" min="0" max="100" step="1" id="heightInput">
+
+                </p>
+                <p>Gender:
+                    <br>
+                    <input type="text" gender="gender" id="genderInput">
+                </p>
+                <p>
+                    <input type="submit" class="btn-info" id="submit-btn">
+                </p>
+            </form>
+            <div id="btn-section" class="col-md-9">
+
+            </div>
+
+        </div>
+
+
+
+
+        <script type="text/javascript" src="./profile.js"></script>
+</body>
+
+
 </body>
 
 </html>

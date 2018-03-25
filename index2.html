@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+
+    <link type="text/css" rel="stylesheet" href="assets\magicscroll-trial\magicscroll-trial\magicscroll\magicscroll.css" />
+    <script type="text/javascript" src="assets\magicscroll-trial\magicscroll-trial\magicscroll\magicscroll.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script type="text/javascript" src="./getfit.js"></script>
+
+    <!-- Firebase Database Link --> 
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAiEVXlgKH6F0J0duzmVdODqy7xMajM_zE",
+            authDomain: "fithappens-bb1e1.firebaseapp.com",
+            databaseURL: "https://fithappens-bb1e1.firebaseio.com",
+            projectId: "fithappens-bb1e1",
+            storageBucket: "fithappens-bb1e1.appspot.com",
+            messagingSenderId: "139108385488"
+        };
+        firebase.initializeApp(config);
+
+        //create database variable 
+        var database = firebase.database();
+    </script>
+</head>
+
+<body background="assets\images\logoother\mosaic.jpg">
+    <div class="fullpage">
+
+        <div class="girl-image">
+            <div class="topbanner">
+                <h1> The Place to Curb Your Craving or Work it Off!!!
+                    <img id="logo" src="assets\images\logoother\newlogo.png">
+
+                </h1>
+            </div>
+        </div>
+
+
+
+
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">User Profile </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="index1.html">Food/Calories</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="workout.html">Workout</a>
+            </li>
+
+        </ul>
+
+
+
+
+        <div class="about">About
+
+            <p>
+                Welcome to Is It Worth It? This website is designed to help to decide if you really want to eat the food you are craving. We will provide you with the amount of calories your favorite foods are. Just click on a food or drink of your choice. Still worth it? The choice is up to you!
+            <br>
+                What did you decide? Eat it anyway? Thats Okay! We have provided you with a way to make up for it. You can work off those calories with excersise. We will show you how long it will take you to burn off that food or drink. All this is personalized to your user profile. Good Luck.
+
+            </p>
+        </div>
+
+
+        <h5>Are you wanting some Food? </h5>
+        <div class="MagicScroll" data-options="mode: cover-flow">
+            <a>
+                <img id="Img" class="image" name="bacon" src="assets/images/food/bacon.jpg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="bread" src="assets/images/food/bread.png" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="cheesecake" src="assets/images/food/cheesecake.jpg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="chicken" src="assets/images/food/chicken.jpg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="chips" src="assets/images/food/chips.jpg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="chocolate" src="assets/images/food/chocolate.jpg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="doughnut" src="assets/images/food/doughnut.png" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="fries" src="assets/images/food/fries.jpg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="hamburger" src="assets/images/food/hamburger.png" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="icecream" src="assets/images/food/icecream.jpg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="nachos" src="assets/images/food/nachos.jpg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="pizza" src="assets/images/food/pizza.png" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="sushi" src="assets/images/food/sushi.jpg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="taco" src="assets/images/food/taco.jpg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="fetuccinni" src="assets/images/food/alfredo.jpg" />
+            </a>
+        </div>
+        <br>
+
+
+        <h7> Are you craving something to drink? </h7>
+        <div class="MagicScroll" data-options="mode: cover-flow">
+            <a>
+                <img id="Img" class="image" name="beer" src="assets/images/drink/beer.png" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="cola" src="assets/images/drink/cola.jpg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="energy drink" src="assets/images/drink/energy.jpeg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="frappuccino" src="assets/images/drink/frappacino.jpeg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="fruit juice" src="assets/images/drink/fruit.png" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="hot chocolate" src="assets/images/drink/hchoco.jpg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="lemonade" src="assets/images/drink/lemonade.jpeg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="margarita" src="assets/images/drink/magarita.jpg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="milk" src="assets/images/drink/milk.png" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="milkshake" src="assets/images/drink/milkshake.png" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="slushie" src="assets/images/drink/slushie.jpeg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="smoothie" src="assets/images/drink/smoothienew.jpg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="sports drink" src="assets/images/drink/sports.png" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="sweet tea" src="assets/images/drink/tea.jpeg" />
+            </a>
+            <a>
+                <img id="Img" class="image" name="wine" src="assets/images/drink/wine.jpeg" />
+            </a>
+        </div>
+        <br>
+
+        <h8> How intense do you want your workout to be???</h8>
+
+        <div class="container-fluid">
+            <div class="gifnbuttons">
+
+                <div class="both">
+                    <img id="img-animate" src="assets\images\intensity\walking.jpg">
+                    <br>
+                    <button id="btn" value="walking" name="walking" class="btn btn-dark">Low Intensity Workout</button>
+                </div>
+
+
+                <div class="both">
+                    <img id="img-animate" src="assets\images\intensity\jogging.jpg">
+                    <br>
+                    <button id="btn" value="jogging" name="jogging" class="btn btn-dark">Medium Intensity Workout</button>
+                </div>
+
+                <div class="both">
+                    <img id="img-animate" src="assets\images\intensity\running.jpg">
+                    <br>
+                    <button id="btn" value="running" name="running" class="btn btn-dark">High Intensity Workout </button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="card-body">
+            <div class="table-responsive-md">
+                <table class="table table-striped table-dark">
+                    <tr>
+                        <th scope="col">Calories of your Food</th>
+                        <th scope="col">Time to burn off (low intensity)</th>
+                        <th scope="col">Time to burn off (medium intensity)</th>
+                        <th scope="col">Time to burn off (high intensity)</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+
+        <div class="container2-fluid">
+
+            <div class="bothresults">
+                <div id="caloriesshow">Calories of your food.
+                    <div id="caloriesresults"></div>
+                </div>
+
+                <div id="workouttimeshow">Time to burn it off
+                    <div id="workoutresults"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
