@@ -40,9 +40,13 @@ $(document).ready(function () {
   database.ref().on("child_added", function (childSnapshot) {
 
     //var newRowContent = "<tr><td>" + childSnapshot.val().firstName + "</td><td>" + childSnapshot.val().lastName + "</td><td>" + childSnapshot.val().weight + "</td><td>" + childSnapshot.val().height + "</td><td>" + childSnapshot.val().dateAdded + "</td></tr>"
-    var newRowContent = "<tr><td>" + '<input type="radio" name="selectUser"/>' + "</td><td>" + childSnapshot.val().firstName + "</td><td>" + childSnapshot.val().lastName + "</td><td>" + childSnapshot.val().weight + "</td><td>" + childSnapshot.val().age + "</td><td>" + childSnapshot.val().gender + "</td><td>"+ childSnapshot.val().height + "</td><td>" 
-    $("#userTable tbody").append(newRowContent);
+    var newRowContent = "<tr><td>" + '<input type="radio" value="" name="selectUser"/>' + "</td><td>" + childSnapshot.val().firstName + "</td><td>" + childSnapshot.val().lastName + "</td><td>" + childSnapshot.val().weight + "</td><td>" + childSnapshot.val().height + "</td><td>" + childSnapshot.val().gender + "</td><td>"+ childSnapshot.val().age + "</td><td>" 
+    
+    $(":radio").attr.val() = childSnapshot.val().firstName+"_"+childSnapshot.val().lastName;
+    //append record into the user table
+    $("#userTable tbody").append(newRowContent);   
 
+    //$( "input[type=radio][name=baz]:checked" ).val();
 
   }, function (errorObject) {
     console.log("Errors handled: " + errorObject.code);
