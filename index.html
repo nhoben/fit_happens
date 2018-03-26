@@ -65,6 +65,7 @@
                             <th>Select User</th>
                             <th>First Name</th>
                             <th>Last Name</th>
+                            <th>Email Address</th>
                             <th>Current Weight (lbs)</th>
                             <th>Height (in)</th>
                             <th>Gender</th>
@@ -79,78 +80,74 @@
         </div>
     </div>
     <br>
-
-
-    <div class="container-fluid2">
-
-        <h4 id=user-profile>Add New User:</h4>
-        <div class="row">
-
-            <form class="col-md-3">
-                <p>Firstname:
-                    <br>
-                    <input type="text" name="firstname" id="firstNameInput">
-                </p>
-                <p>Lastname:
-                    <br>
-                    <input type="text" name="lastname" id="lastNameInput">
-                </p>
-                <p>Email Address:
-                    <input type="text" name="email address" id="emailInput">
-                </p>
-                <p>Age:
-                    <br>
-                    <input type="number" age="age" id="ageInput">
-                </p>
-                <p>Weight(in lbs):
-                    <input type="number" weight="weight" id="weightInput">
-                </p>
-                <p>Height(inches):
-                    <br>
-                    <input type="number" name="inches" min="0" max="100" step="1" id="heightInput">
-
-                </p>
-                <p>Gender:
-                    <br>
-                    <input type="text" gender="gender" id="genderInput">
-                </p>
-                <p>
-                    <button type="submit" class="btn btn-defaul" id="userButton">Submit</button>
-                </p>
-            </form>
-            <div id="btn-section" class="col-md-9">
-
+    <div class="row">
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>Add New User:</h4>
+                </div>
+                <form role="form" class="panel-body" id="userForm">
+                    <div class="form-group">
+                        <label for="">First Name</label>
+                        <input type="text" class="form-control" id="firstNameInput" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Last Name</label>
+                        <input type="text" class="form-control" id="lastNameInput" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email Address</label>
+                        <input type="text" class="form-control" id="emailInput" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Weight (lbs)</label>
+                        <input type="text" class="form-control" id="weightInput" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Height (in)</label>
+                        <input type="text" class="form-control" id="heightInput" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Age</label>
+                        <input type="text" class="form-control" id="ageInput" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Gender</label>
+                        <input type="text" class="form-control" id="genderInput" placeholder="">
+                    </div>
+                    <button type="submit" class="btn btn-default" id="userButton">Submit</button>
+                </form>
             </div>
-
         </div>
+    </div>
 
-        <!-- initialize firebase db -->
-        <script>
-            // Initialize Firebase
-            var config = {
-                apiKey: "AIzaSyAiEVXlgKH6F0J0duzmVdODqy7xMajM_zE",
-                authDomain: "fithappens-bb1e1.firebaseapp.com",
-                databaseURL: "https://fithappens-bb1e1.firebaseio.com",
-                projectId: "fithappens-bb1e1",
-                storageBucket: "fithappens-bb1e1.appspot.com",
-                messagingSenderId: "139108385488"
-            };
-            firebase.initializeApp(config);
-        </script>
+    <!-- initialize firebase db -->
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAiEVXlgKH6F0J0duzmVdODqy7xMajM_zE",
+            authDomain: "fithappens-bb1e1.firebaseapp.com",
+            databaseURL: "https://fithappens-bb1e1.firebaseio.com",
+            projectId: "fithappens-bb1e1",
+            storageBucket: "fithappens-bb1e1.appspot.com",
+            messagingSenderId: "139108385488"
+        };
+        firebase.initializeApp(config);
+    </script>
 
-        <!-- link to jquery library -->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
+    <!-- link to jquery library -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 
-        <!-- Link to Moment.js should go here -->
-        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Link to Moment.js should go here -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
-        <!--link to javascript file -->
-        <script type="text/javascript" src="./assets/javascript/userProfile.js"></script>
-<script type="text/javascript" src="./assets/javascript/foodCalculator.js"></script>
+    <!--link to javascript file -->
+    <script type="text/javascript" src="./assets/javascript/userProfile.js"></script>
+    <!-- <script type="text/javascript" src=""></script> -->
 </body>
 
 </html>

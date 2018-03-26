@@ -1,13 +1,13 @@
 $(document).ready(function () {
   //Testing to ensure javascript is linked properly//
 
-//alert("this file is linked to the javascript file");
+  //alert("this file is linked to the javascript file");
   var database = firebase.database();
+  var userId
 
   $("#userButton").on("click", function () {
     event.preventDefault();
 
-    //var userId = uid;
     var firstName = $("#firstNameInput").val().trim();
     var lastName = $("#lastNameInput").val().trim();
     var email = $("#emailInput").val().trim();
@@ -15,11 +15,12 @@ $(document).ready(function () {
     var height = $("#heightInput").val().trim();
     var age = $("#ageInput").val().trim();
     var gender = $("#genderInput").val().trim();
+    
     //console.log user profile to make sure it works
-    console.log(firstName);
+    //console.log(firstName);
 
     var user = database.ref().push({
-    //database.ref().child(firstName+"_"+lastName).set({
+      //database.ref().child(firstName+"_"+lastName).set({
       firstName: firstName,
       lastName: lastName,
       email: email,
@@ -29,30 +30,24 @@ $(document).ready(function () {
       age: age,
       dateAdded: firebase.database.ServerValue.TIMESTAMP,
     });
+
     alert("New User has been added!");
-    var userId = user.key;
+    userId = user.key;
     console.log(userId);
+  });//closes the submit event
 
-    //clear the userInputForm
-  //document.getElementById("userForm").reset();
+    database.ref().on("child_added", function (childSnapshot) {
 
-  });
+      //$("<td dataKey= '" + k + "' class = 'text-center'>").html('<i class="text-danger fas fa-trash-alt"></i>')
+      //var newRowContent = "<tr><td>" + childSnapshot.val().firstName + "</td><td>" + childSnapshot.val().lastName + "</td><td>" + childSnapshot.val().weight + "</td><td>" + childSnapshot.val().height + "</td><td>" + childSnapshot.val().dateAdded + "</td></tr>"
+      var newRowContent = "<tr><td>" + '<input type="radio" name="selectUser"/>' + "</td><td>" + childSnapshot.val().firstName + "</td><td>" + childSnapshot.val().lastName + "</td><td>" + childSnapshot.val().email + "</td><td>" + childSnapshot.val().weight + "</td><td>" + childSnapshot.val().height + "</td><td>" + childSnapshot.val().gender + "</td></tr>" + childSnapshot.val().age + "</td></tr>"
+      
+      //writes data to table
+      $("#userTable tbody").append(newRowContent);
+  
+    }, function (errorObject) {
+      console.log("Errors handled: " + errorObject.code);
+    });
 
-  database.ref().on("child_added", function (childSnapshot) {
 
-    //var newRowContent = "<tr><td>" + childSnapshot.val().firstName + "</td><td>" + childSnapshot.val().lastName + "</td><td>" + childSnapshot.val().weight + "</td><td>" + childSnapshot.val().height + "</td><td>" + childSnapshot.val().dateAdded + "</td></tr>"
-    var newRowContent = "<tr><td>" + '<input type="radio" value="" name="selectUser"/>' + "</td><td>" + childSnapshot.val().firstName + "</td><td>" + childSnapshot.val().lastName + "</td><td>" + childSnapshot.val().weight + "</td><td>" + childSnapshot.val().height + "</td><td>" + childSnapshot.val().gender + "</td><td>"+ childSnapshot.val().age  
-    
-    //load data into the userTbl
-    $("#userTable tbody").append(newRowContent);
-
-  }, function (errorObject) {
-    console.log("Errors handled: " + errorObject.code);
-  });
-
-  $('#user a').click(function (e) {
-    e.preventDefault()
-    $(this).tab('show')
-  })
-
-});
+  });//closes the document dot ready
