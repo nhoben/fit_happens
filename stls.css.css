@@ -1,0 +1,188 @@
+
+.nav-pills { 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
+    font-size: 1.5em;
+    font-weight: bolder;
+    background-image: url(assets/images/logoother/pixels.jpg);
+    height: 15%;
+    }
+
+.jumbotron {
+    background-image: url(assets/images/logoother/balllady.jpg);
+    background-size: cover;
+    text-align: center;
+    color:rgb(29, 207, 238);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 1.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+
+#logo{
+    width:8em;
+    height:5em;
+    margin-top: -2em;
+}
+
+
+.spotifycard {
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 3em;
+}
+
+.card { 
+    border-radius: 10%;
+    width: 75%;
+    margin-top: 2em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2em;
+    background-color:#a5a2a2;
+    border: .2em dotted rgb(8, 17, 8);
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color:rgb(14, 12, 12);
+}
+
+p{
+    font-size: .7em;
+}
+
+.MagicScroll{
+    height: 10em;
+    margin-top: 1em;
+    border: .5em solid rgb(25, 13, 184);
+    border-radius: 1em;
+}
+
+#Img{
+    border: .3em solid rgb(8, 82, 14);
+    border-radius: .2em;
+}
+    
+
+.container{
+    background-color: rgb(205, 230, 230);
+    padding: 1em 1em 1em 1em;
+    border: .5em solid rgb(25, 13, 184);
+    border-radius: 1em;
+    margin-top: 2em;
+   
+}
+#img-ex {
+    position: center;
+    width: 18em;
+    height: 18em;
+    border: .8em solid rgb(8, 82, 14);
+    border-radius: .2em;
+}
+#btn {
+ width:18em;
+ margin-top:.5em;
+}
+
+
+
+@media (max-width: 768px) {
+  .btn {
+    font-size:11px;
+    padding:4px 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn {
+    font-size:12px;
+    padding:6px 12px;
+  }
+}
+
+@media (min-width: 992px) {
+  .btn {
+    font-size:14px;
+    padding:8px 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .btn {
+    padding:10px 16px;
+    font-size:18px;
+  }
+}
+
+@media only screen and (max-width: 1em) {
+
+    body { 
+       font-size: 2em; 
+    }
+ 
+ }
+
+h5{
+     font-size: 2em;
+     color:rgb(151, 240, 151)
+}
+
+h7{
+    font-size: 2em;
+    color:rgb(151, 240, 151)
+}
+
+h8{
+    font-size: 2em;
+    color:rgb(151, 240, 151)
+}
+
+#user-profile{
+    font-size: 3.2em;
+}
+
+
+.card-img-top{
+
+    height: 9em;
+    width: 9em;
+    margin-right: auto;
+    margin-left:auto;
+}
+
+.gifnbuttons{
+        margin-right: 3%;
+        margin-left: 3%;
+     
+    }
+
+   
+
+
+
+.data {color: white; 
+
+}
+
+#userTable{
+    margin-top:4em;
+    color: white;
+    background-color: grey;
+
+}
+
+
+  #form-group{
+    background-image: url(assets/logoother/greenback.jpg);
+    background-size: cover;
+    color: rgb(19, 9, 109);
+    font-size: 2em;
+    padding: 1em 1em 1em 1em;
+    margin-right: 3em;
+    margin-left:3em;
+    margin-top:3em;
+    border: .1em double rgb(25, 13, 184);
+    border-radius: 1em;
+   
+   }
+
+  
+ 

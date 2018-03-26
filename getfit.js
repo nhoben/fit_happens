@@ -118,6 +118,15 @@ $("a[data-food-name]").on("click", function (event) {
         }).then(function (response) {
             console.log(response);
 
+
+  console.log("walking:" + response.exercises[0].nf_calories);
+    console.log("jogging:" + response.exercises[1].nf_calories);
+    console.log("walking:" + response.exercises[2].nf_calories);
+
+$("#walking").append("walking for 30 minutes will burn " + response.exercises[0].nf_calories + " calories");
+$("#jogging").append("jogging for 30 minutes will burn " + response.exercises[1].nf_calories + " calories");
+$("#running").append("running for 30 minutes will burn " + response.exercises[2].nf_calories + " calories");
+
             // save exercise in variable 
             var exercise = response.exercises
 
